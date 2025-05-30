@@ -85,7 +85,7 @@ Meskipun MaSubs Studio menyediakan fungsionalitas inti, Anda mungkin memerlukan 
 Aplikasi MaSubs dan MaSubsBurner disediakan sebagai file `.exe` yang portabel dan **sudah menyertakan `ffmpeg.exe` di dalamnya**. Anda tidak perlu menginstal dependensi tambahan apa pun untuk menjalankannya.
 
 1.  **Unduh Aplikasi:**
-    * Kunjungi halaman **[Releases](PAUTAN_KE_HALAMAN_RELEASES_GITHUB_ANDA)** di repositori GitHub ini.
+    * Kunjungi halaman **[Releases](https://github.com/madhasoeki/MaSubs-Studio/releases/tag/v1.0)** di repositori GitHub ini.
     * Unduh file `MaSubs.exe` dan/atau `MaSubsBurner.exe` dari rilis terbaru.
 2.  **Jalankan Aplikasi:**
     * Setelah diunduh, Anda bisa langsung menjalankan file `.exe` tersebut. Tidak ada proses instalasi formal yang diperlukan. Simpan file `.exe` di lokasi yang mudah Anda akses.
