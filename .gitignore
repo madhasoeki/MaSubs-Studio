@@ -1,0 +1,21 @@
+# Virtual Environments
+venv/
+*/venv/
+
+# PyInstaller - Direktori output build dan .exe
+# Kita akan mengunggah .exe melalui Releases, jadi kita abaikan folder dist dari source code
+build/
+*/build/
+dist/
+*/dist/
+# *.spec # Anda bisa memilih untuk menyertakan file .spec jika ingin orang lain bisa build ulang
+
+# Python cache
+__pycache__/
+*/__pycache__/
+*.py[cod]
+
+# IDE/Editor specific
+.vscode/
+.idea/
+*.swp
