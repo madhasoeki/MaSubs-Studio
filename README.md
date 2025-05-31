@@ -85,7 +85,7 @@ Meskipun MaSubs Studio menyediakan fungsionalitas inti, Anda mungkin memerlukan 
 Aplikasi MaSubs dan MaSubsBurner disediakan sebagai file `.exe` yang portabel dan **sudah menyertakan `ffmpeg.exe` di dalamnya**. Anda tidak perlu menginstal dependensi tambahan apa pun untuk menjalankannya.
 
 1.  **Unduh Aplikasi:**
-    * Kunjungi halaman **[Releases](https://github.com/madhasoeki/MaSubs-Studio/releases/tag/v1.0)** di repositori GitHub ini.
+    * Kunjungi halaman **[Releases](PAUTAN_KE_HALAMAN_RELEASES_GITHUB_ANDA)** di repositori GitHub ini.
     * Unduh file `MaSubs.exe` dan/atau `MaSubsBurner.exe` dari rilis terbaru.
 2.  **Jalankan Aplikasi:**
     * Setelah diunduh, Anda bisa langsung menjalankan file `.exe` tersebut. Tidak ada proses instalasi formal yang diperlukan. Simpan file `.exe` di lokasi yang mudah Anda akses.
@@ -155,8 +155,8 @@ Jika Anda ingin menjalankan aplikasi dari kode sumber (`.py`):
     * `pip` (biasanya sudah terinstal bersama Python)
 2.  **Clone Repositori:**
     ```bash
-    git clone PAUTAN_KE_REPOSITORI_GITHUB_ANDA
-    cd NAMA_REPOSITORI_ANDA
+    git clone https://github.com/madhasoeki/MaSubs-Studio.git
+    cd MaSubs-Studio
     ```
 3.  **Untuk MaSubs:**
     * Masuk ke folder `MaSubs`: `cd MaSubs`
@@ -188,47 +188,48 @@ Jika Anda ingin menjalankan aplikasi dari kode sumber (`.py`):
 
 **Struktur Proyek (Jika Anda Mengunduh Seluruh Kode Sumber):**
 
-MaSubs-Studio/ (Folder Root Repositori Anda)
-├── MaSubs/                     # Aplikasi untuk transkripsi otomatis
-│   ├── core_logic.py
-│   ├── main_app.py
-│   ├── main_app.spec         # (Digunakan PyInstaller untuk build .exe, jika disertakan)
-│   ├── logo.ico
-│   ├── ffmpeg.exe            # (Untuk bundling jika menjalankan build dari source)
-│   └── ffprobe.exe           # (Untuk bundling jika menjalankan build dari source)
-├── MaSubsBurner/               # Aplikasi untuk hardcode subtitle
-│   ├── burner_logic.py
-│   ├── main_burner.py
-│   ├── main_burner.spec      # (Digunakan PyInstaller untuk build .exe, jika disertakan)
-│   ├── logo_burner.ico       # (Opsional)
-│   ├── ffmpeg.exe            # (Untuk bundling jika menjalankan build dari source)
-│   └── ffprobe.exe           # (Untuk bundling jika menjalankan build dari source)
-└── README.md
+MaSubs-Studio/
+├── MaSubs/                      # Aplikasi transkripsi otomatis
+│   ├── core_logic.py            # Logika inti untuk transkripsi
+│   ├── main_app.py              # Entrypoint untuk aplikasi MaSubs
+│   ├── main_app.spec            # File spec PyInstaller untuk build .exe
+│   ├── logo.ico                 # Ikon aplikasi (opsional)
+│   ├── ffmpeg.exe               # FFmpeg untuk bundling (opsional)
+│   └── ffprobe.exe              # FFprobe untuk bundling (opsional)
+├── MaSubsBurner/                # Aplikasi hardcode subtitle ke video
+│   ├── burner_logic.py          # Logika inti untuk proses burning subtitle
+│   ├── main_burner.py           # Entrypoint untuk aplikasi MaSubsBurner
+│   ├── main_burner.spec         # File spec PyInstaller untuk build .exe
+│   ├── logo_burner.ico          # Ikon aplikasi MaSubsBurner (opsional)
+│   ├── ffmpeg.exe               # FFmpeg untuk bundling (opsional)
+│   └── ffprobe.exe              # FFprobe untuk bundling (opsional)
+├── README.md                    # Dokumentasi dan petunjuk penggunaan
+└── .gitignore                   # Daftar file/direktori yang diabaikan Git
+
 
 
 **Saran `.gitignore` (Jika Anda Mengelola Kode Sumber):**
 
-Virtual Environments
+```gitignore
+# Virtual Environments
 venv/
 */venv/
 
-PyInstaller - Direktori output build dan .exe
+# PyInstaller - Direktori output build dan .exe
 build/
 */build/
 dist/
 */dist/
 
-*.spec # Komentari jika Anda ingin menyertakan file .spec yang sudah dikustomisasi
-Python cache
-pycache/
+# Python cache
+__pycache__/
 *.py[cod]
 
-IDE/Editor specific
+# IDE/Editor specific
 .vscode/
 .idea/
 *.swp
 
-
----
-
-Semoga MaSubs Studio bermanfaat! Jika ada pertanyaan atau masukan, jangan ragu untuk membuka _Issue_.
+# File spesifik aplikasi
+*.log
+*.tmp
